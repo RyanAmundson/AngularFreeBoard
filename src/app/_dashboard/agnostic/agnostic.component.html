@@ -1,0 +1,14 @@
+<div class="container">
+    <div *ngFor="let tile of tiles"
+        class="portal-outlet {{tile.gridPositionClasses}}">
+        <!-- <ng-template #portalOutet
+            [cdkPortalOutlet]="tile?.portal"
+            (attached)="portalAttached($event)">
+        </ng-template> -->
+        <ndc-dynamic [ndcDynamicComponent]="tile.resolvedComponentType"
+            [ndcDynamicInputs]="tile.inputs">
+            <!-- [ndcDynamicOutputs]="tile.context" -->
+        </ndc-dynamic>
+        {{tile.context}}
+    </div>
+</div>

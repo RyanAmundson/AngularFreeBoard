@@ -1,0 +1,23 @@
+<ng-container *ngIf="(contextAsync | async) as context">
+    <div class="tile animated fadeIn faster"
+        [ngClass]="{
+        'critical pulse': context?.status == 'critical',
+        warning: context?.status == 'warning',
+        good: context?.status == 'good'
+    }">
+        <div class="who"
+            [@fade]>
+            <span>
+                {{ context?.person }}
+            </span>
+        </div>
+        <div class="icon">
+            <!-- <div [innerHTML]="context?.icon"></div> -->
+            <i class="fas fa-{{context?.icon}}"></i>
+        </div>
+        <div class="text"
+            [@fade]>
+            {{ context?.text }}
+        </div>
+    </div>
+</ng-container>

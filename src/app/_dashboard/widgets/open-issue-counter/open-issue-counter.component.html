@@ -1,0 +1,8 @@
+<ng-container *ngIf="(contextAsync | async) as context">
+    <div class="header">
+        {{context?.headerText}}
+    </div>
+    <div class="body">
+        {{context?.value}}
+    </div>
+</ng-container>
