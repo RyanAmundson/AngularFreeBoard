@@ -1,0 +1,66 @@
+
+.container {
+    height:100%;
+    flex:1 1 100%;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content: stretch;
+    font-size:24px;
+
+    .header {
+        flex: 1 9 auto;
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: space-between;
+        padding:10px;
+        .title {
+            display:flex;
+            align-items:center;
+            font-size:1.5rem;
+            mat-icon {
+                display:flex;
+            }
+        }
+        .amount {
+            display:flex;
+            align-items:center;
+            font-size:1.5rem;
+        }
+    }
+
+    .content {
+        flex: 9 1 100%;
+        display:flex;
+        flex-direction:row;
+        align-items:stretch;
+        justify-content: stretch;
+        flex-wrap:wrap;
+
+        highcharts-chart {
+            max-height:100%;
+            max-width:600px;
+            flex: 1 5 300px;
+            display:flex;
+            align-self:center;
+            align-items:center;
+            justify-content: center;
+            flex-wrap:wrap;
+
+        }
+
+        table {
+            flex: 5 1 60%;
+            align-self:center;
+            justify-self: center;
+            justify-content: center;
+            align-items:center;
+            font-size:24px;
+
+            .mat-cell, .mat-header-cell {
+                font-size:1.5rem;
+            }
+        }
+    }
+}

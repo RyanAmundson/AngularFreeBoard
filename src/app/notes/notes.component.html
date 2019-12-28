@@ -1,0 +1,34 @@
+<!-- <mat-form-field class="note-input" appearance="outline"> -->
+<!-- <input matInput placeholder="New Note" [(ngModel)]="newNote.value" (keydown.enter)="update()" /> -->
+<!-- </mat-form-field> -->
+<mdc-text-field label="New Note" [(ngModel)]="newNote.value" (keydown.enter)="update()" outlined
+  class=" note-input demo-shaped-text-field--outline"></mdc-text-field>
+
+<mdc-list-group subheader="">
+  <mdc-list twoLine avatar class="demo-list--custom">
+    <mdc-list-item *ngFor="let note of notes?.reverse()">
+      <mdc-icon mdcListItemGraphic>note</mdc-icon>
+      <mdc-list-item-text [secondaryText]="note?.date | date">{{note?.value}}</mdc-list-item-text>
+    </mdc-list-item>
+  </mdc-list>
+</mdc-list-group>
+
+<!-- <div class="note-list">
+  <mat-card *ngFor="let note of notes?.reverse()" (swiperight)="showDelete = note.key"
+    [ngClass]="{ 'show-delete': showDelete == note.key }">
+    <div class="btns">
+      <button class="delete-button" mat-raised-button color="warn" *ngIf="showDelete == note.key"
+        (click)="deleteNote(note); showDelete = null">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button class="cancel-button" mat-raised-button color="basic" *ngIf="showDelete == note.key"
+        (click)="showDelete = null">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </div>
+    <span *ngIf="showDelete !== note.key">{{ note?.value }}</span>
+    <div class="timestamp" *ngIf="showDelete !== note.key">
+      {{ note?.date | date }}
+    </div>
+  </mat-card>
+</div> -->

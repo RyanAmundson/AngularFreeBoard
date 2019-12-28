@@ -1,0 +1,41 @@
+:host {
+  height: 100%;
+  width: 100%;
+
+  mat-drawer-container {
+    height: 100%;
+
+    mat-drawer-content {
+      display: flex;
+      flex-direction: column;
+      overflow:hidden;
+
+      mdc-top-app-bar {
+        .avatar-button {
+          padding: 0;
+        }
+
+        nav {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+          justify-content: stretch;
+        }
+      }
+
+      #main-outlet {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: stretch;
+        overflow:auto;
+      }
+    }
+  }
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
