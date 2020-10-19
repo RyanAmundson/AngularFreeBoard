@@ -1,0 +1,86 @@
+{
+    "id": 1,
+    "name": "test board",
+    "tiles": [
+        {
+            "id": "1",
+            "component": "IconStatusComponent",
+            "dataSourceUrl": "https://smarthomedashboard-3e912.firebaseio.com/chores/breakdown/floors",
+            "inputs": {
+                "firebaseRef": "chores/breakdown/floors"
+            },
+            "gridPosition": {
+                "x": 1,
+                "y": 9,
+                "w": 3,
+                "h": 3
+            },
+            "context": {
+                "who": "test",
+                "icon": "<i class='fas fa-broom'></i>",
+                "status": "good",
+                "text": "text"
+            }
+        },
+        {
+            "id": "2",
+            "component": "IconStatusComponent",
+            "dataSourceUrl": "",
+            "inputs": {
+                "firebaseRef": "chores/breakdown/kitchen"
+            },
+            "gridPosition": {
+                "x": 4,
+                "y": 9,
+                "w": 3,
+                "h": 3
+            },
+            "context": {
+                "who": "test",
+                "icon": "<i class='fas fa-broom'></i>",
+                "status": "good",
+                "text": "text"
+            }
+        },
+        {
+            "id": "3",
+            "component": "IconStatusComponent",
+            "dataSourceUrl": "",
+            "inputs": {
+                "firebaseRef": "chores/breakdown/trash"
+            },
+            "gridPosition": {
+                "x": 7,
+                "y": 9,
+                "w": 3,
+                "h": 3
+            },
+            "context": {
+                "who": "test",
+                "icon": "<i class='fas fa-broom'></i>",
+                "status": "good",
+                "text": "text"
+            }
+        },
+        {
+            "id": "4",
+            "component": "IconStatusComponent",
+            "dataSourceUrl": "",
+            "inputs": {
+                "firebaseRef": "chores/breakdown/bathroom"
+            },
+            "gridPosition": {
+                "x": 10,
+                "y": 9,
+                "w": 3,
+                "h": 3
+            },
+            "context": {
+                "who": "test",
+                "icon": "<i class='fas fa-broom'></i>",
+                "status": "good",
+                "text": "text"
+            }
+        }
+    ]
+}

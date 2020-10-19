@@ -1,0 +1,72 @@
+
+
+
+:host {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+    align-items: stretch;
+    justify-content: stretch;
+    font-family: monospace;
+    overflow:hidden;
+    .tile {
+        width: 100%;
+        height: 100%;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        // color:white;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);//header #101214
+        background-color:#2a2a2a;
+        display: flex;
+        flex-direction:column;
+        align-items: stretch;
+        justify-content: stretch;
+        .who {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .icon {
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: black;
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9.5vmin;
+        }
+
+        .text {
+            font-size: 2.5rem;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    .good {
+        // box-shadow: 0 3px 6px rgba(0, 254, 0, 0.16), 0 3px 6px rgba(0, 254, 0, 0.23)!important;
+        text-shadow: 1px 1px 2px green, 0 0 1em green, 0 0 0.2em green;
+        color:green;
+    }
+    
+    .warning {
+        // border: 2px solid yellow;
+        // box-shadow: 0 3px 6px rgba(254, 0, 0, 0.16), 0 3px 6px rgba(254, 0, 0, 0.23)!important;
+        text-shadow: 1px 1px 2px orange, 0 0 1em orange, 0 0 0.2em orange;
+        color:orange;
+    }
+    
+    .critical {
+        // border: 2px solid red;
+        // box-shadow: 0 3px 6px rgba(254, 0, 0, 0.16), 0 3px 6px rgba(254, 0, 0, 0.23)!important;
+        text-shadow: 1px 1px 2px red, 0 0 1em red, 0 0 0.2em red;
+        color:red;
+    }
+}

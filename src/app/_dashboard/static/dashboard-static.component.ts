@@ -2,10 +2,9 @@ import { Component, OnInit, HostListener, ViewChild, ContentChildren, QueryList,
 import { SwPush } from '@angular/service-worker';
 // import { PushNotificationService, PushNotificationOptions } from 'ngx-push-notifications';
 import { timer } from 'rxjs';
-import { TileComponent } from '../../_shared/tile/tile.component';
+import { TileComponent } from '../tile/tile.component';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { ChoresComponent } from '../../chores/chores.component';
-import { ChoreService } from '../../chores/_services/chore.service';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -22,14 +21,13 @@ export class DashboardStaticComponent implements OnInit {
   disableCycleButton = false;
 
   choreList = [];
-  utilitiesList = ["water","electricity","garbage", 'internet', 'sewer'];
+  utilitiesList = ["water", "electricity", "garbage", 'internet', 'sewer'];
   updater = false;
   rI;
   rotationIndex = this.firebase.object('chores/rotationIndex').valueChanges();
 
   @ViewChildren(TileComponent) tiles: QueryList<TileComponent>;
-  @ViewChild(ChoresComponent, {static:false}) choreComp: ChoresComponent;
-  
+
   criticalChores = false;
 
   @HostListener('window:keyup', ['$event'])
@@ -43,14 +41,11 @@ export class DashboardStaticComponent implements OnInit {
 
   }
 
-  constructor(private firebase: AngularFireDatabase, public choreService:ChoreService) {
+  constructor(private firebase: AngularFireDatabase) {
   }
 
   ngOnInit() {
-    this.rotationIndex.subscribe((r: number) => (this.rI = r));
-    this.choreService.hasCriticalChore.subscribe((has) => {
-      this.criticalChores = has;
-    });
+
   }
 
   ngAfterViewInit() {
@@ -59,16 +54,9 @@ export class DashboardStaticComponent implements OnInit {
   }
 
   loadingComplete() {
-    console.log("loading done")
   }
 
   onKeydown(event) {
-    console.log(event.key)
-    if (event.key == "39") {
-      this.activeTab++;
-    } else if (event.key == "37") {
-      this.activeTab--;
-    }
   }
 
   resizeAllGridItems() {
