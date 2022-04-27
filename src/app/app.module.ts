@@ -20,7 +20,7 @@ import { PageNotFoundComponent } from './_common/page-not-found/page-not-found.c
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

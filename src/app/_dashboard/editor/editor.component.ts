@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditorComponent implements OnInit {
 
+  expanded = true;
+
   constructor() { }
 
   ngOnInit() {
