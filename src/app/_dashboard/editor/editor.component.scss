@@ -1,0 +1,62 @@
+$main-background: #101214;
+$font-family: monospace;
+:host {
+
+    .editor {
+        position:absolute;
+        height:100vh;
+        width:100vw;
+        z-index: 1;
+        display:flex;
+        flex-direction: row;
+        background: lighten($main-background, 10%);
+        font-family: $font-family;
+        
+        .editor-toggle {
+            position:absolute;
+            z-index: 1;
+            top:10vh;
+            left:0;
+            height:10vh;
+            width:10vw;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+
+        }
+
+        .top-menu {
+            background: lighten($main-background, 10%);
+            position:absolute;
+            top:0;
+            left:10vw;
+            height:10vh;
+            width:90vw;
+
+        }
+
+        .left-menu {
+            background: lighten($main-background, 10%);
+            position:absolute;
+            left:0;
+            top:10vh;
+            width:10vh;
+            height:100vh;
+        }
+
+
+
+
+        .new-tile {
+            width:25%;
+            max-width:25%;
+            flex: 1 1 100%;
+            background: lighten($main-background, 5%);
+            align-items:center;
+            justify-content: center;
+        }
+    }
+
+
+}

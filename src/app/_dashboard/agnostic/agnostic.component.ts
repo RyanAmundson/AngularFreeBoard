@@ -54,4 +54,8 @@ export class AgnosticComponent implements OnInit {
     return map[compName];
   }
 
+  updatePosition(event:DragEvent) {
+    console.log(event)
+  }
+
 }

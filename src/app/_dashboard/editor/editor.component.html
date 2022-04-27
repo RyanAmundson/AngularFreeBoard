@@ -1,1 +1,8 @@
-<p>editor works!</p>
+<div class="editor" cdkDropList>
+    <div class="editor-toggle" (click)="expanded = !expanded">
+        ||
+    </div>
+    <div class="top-menu">Top</div>
+    <div class="side-menu">Side</div>
+    <ng-content></ng-content>
+</div>

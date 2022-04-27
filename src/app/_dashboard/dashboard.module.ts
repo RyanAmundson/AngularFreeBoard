@@ -14,6 +14,10 @@ import { IconStatusComponent } from './widgets/icon-status/icon-status.component
 import { DynamicModule } from 'ng-dynamic-component';
 import { WidgetBaseComponent } from './widgets/widget-base/widget-base.component';
 import { OpenIssueCounterComponent } from './widgets/open-issue-counter/open-issue-counter.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
+
+
 
 @NgModule({
   declarations: [
@@ -28,6 +32,7 @@ import { OpenIssueCounterComponent } from './widgets/open-issue-counter/open-iss
   imports: [
     CommonModule,
     DashboardRoutingModule,
+    DragDropModule,
     DynamicModule.withComponents([TileComponent, OpenIssueCounterComponent,
       IconStatusComponent]),
     SharedModule,
